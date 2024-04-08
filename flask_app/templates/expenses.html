@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Expenses for {{ start_year }}-{{ end_year }}</title>
+    </head>
+    <body>
+        <header>
+            <h1>Expenses for {{ start_year }}-{{ end_year }}</h1>
+            <p><a href="/">Home</a></p>
+        </header>
+        <main>
+            <section>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Year</td>
+                            <td>Total Expense</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in table_data %}
+                        <tr>
+                            <td>{{ row[0] }}</td>
+                            <td>{{ row[1] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        <footer><a href="/">Home</a></footer>
+    </body>
+</html>

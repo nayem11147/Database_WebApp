@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Group 6</title>
+    </head>
+    <body>
+        <header>
+            <h1>MUC Database</h1>
+        </header>
+        <main>
+            <section>
+                <form action="/table" method="post">
+                    <h2>Show Table</h2>
+                    Table Name: <input type="text" name="table_name" required /><br />
+                    <input type="submit" value="Show" />
+                </form>
+            </section>
+            <br />
+            <section>
+                <form action="/supplier" method="post">
+                    <h2>Add Supplier</h2>
+                    ID #: <input type="number" name="sup_id" required /><br />
+                    Name: <input type="text" name="sup_name" required /><br />
+                    Email: <input type="text" name="sup_email" required /><br />
+                    Telephone #'s (comma-separated): <textarea name="sup_tel" required></textarea><br />
+                    <input type="submit" value="Add" />
+                </form>
+            </section>
+            <br />
+            <section>
+                <form action="/expenses" method="post">
+                    <h2>Annual Expenses for Parts</h2>
+                    Start Year: <input type="number" name="start_year" required /><br />
+                    End Year: <input type="number" name="end_year" required /><br />
+                    <input type="submit" value="Summarize" />
+                </form>
+            </section>
+            <br />
+            <section>
+                <form action="/budget" method="post">
+                    <h2>Budget Projection</h2>
+                    Number of Years: <input type="number" name="years" required /><br />
+                    Inflation Rate (%): <input type="number" name="rate" required /><br />
+                    <input type="submit" value="Calculate" />
+                </form>
+            </section>
+        </main>
+    </body>
+</html>
